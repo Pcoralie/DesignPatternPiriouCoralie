@@ -100,6 +100,9 @@ public class Inventory {
             inventory.updateQuality();
             inventory.printInventory();
         }
+
+        //inventory.accept( new UpdateVisitor());
+
     }
 
     public Item[] getItems() {
