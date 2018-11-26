@@ -14,24 +14,21 @@ public class Inventory {
     // changer le constructeur pour ajouter des instances de A, B ou C
     // changer updateInventory pour créer une instance de update visitor qui sera utilisé pour visiter chaque item de la liste
 
-    public Inventory() {
-        super();
-        items = new Item[] {  new ItemA(), new ItemB()};
-    }
 
-    /*
+
+
     public Inventory() {
         super();
         items = new Item[]{
-                new Item("+5 Dexterity Vest", 10, 20),
-                new Item("Aged Brie", 2, 0),
-                new Item("Elixir of the Mongoose", 5, 7),
-                new Item("Sulfuras, Hand of Ragnaros", 0, 80),
-                new Item("Backstage passes to a TAFKAL80ETC concert", 15, 20),
-                new Item("Conjured Mana Cake", 3, 6)
+                new DexterityItem("+5 Dexterity Vest", 10, 20),
+                new AgedBrieItem("Aged Brie", 2, 0),
+                new ElixirItem("ElixirItem of the Mongoose", 5, 7),
+                new SulfurasItem("Sulfuras, Hand of Ragnaros", 0, 80),
+                new BackstageItem("Backstage passes to a TAFKAL80ETC concert", 15, 20),
+                new ConjuredItem("Conjured Mana Cake", 3, 6)
         };
 
-    }*/
+    }
 
     public void printInventory() {
         System.out.println("***************");

@@ -9,6 +9,7 @@ public abstract class Item implements IVisitable{
 
     public Item(){
 
+
     }
 
     public Item(String name, int sellIn, int quality) {
