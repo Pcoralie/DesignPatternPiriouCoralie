@@ -4,12 +4,22 @@ public class Inventory {
 
 
     private Item[] items;
+    //private List<Item> items ;
 
     public Inventory(Item[] items) {
         super();
         this.items = items;
     }
 
+    // changer le constructeur pour ajouter des instances de A, B ou C
+    // changer updateInventory pour créer une instance de update visitor qui sera utilisé pour visiter chaque item de la liste
+
+    public Inventory() {
+        super();
+        items = new Item[] {  new ItemA(), new ItemB()};
+    }
+
+    /*
     public Inventory() {
         super();
         items = new Item[]{
@@ -21,7 +31,7 @@ public class Inventory {
                 new Item("Conjured Mana Cake", 3, 6)
         };
 
-    }
+    }*/
 
     public void printInventory() {
         System.out.println("***************");
