@@ -1,5 +1,7 @@
 package edu.insightr.gildedrose;
 
+import java.util.List;
+
 public class Inventory {
 
 
@@ -11,12 +13,10 @@ public class Inventory {
         this.items = items;
     }
 
+
+
+
     // changer le constructeur pour ajouter des instances de A, B ou C
-    // changer updateInventory pour créer une instance de update visitor qui sera utilisé pour visiter chaque item de la liste
-
-
-
-
     public Inventory() {
         super();
         items = new Item[]{
@@ -38,6 +38,7 @@ public class Inventory {
         System.out.println("***************");
         System.out.println("\n");
     }
+
 
     public void updateQuality() {
         for (int i = 0; i < items.length; i++) {
@@ -96,12 +97,24 @@ public class Inventory {
 
     public static void main(String[] args) {
         Inventory inventory = new Inventory();
+        /*
         for (int i = 0; i < 10; i++) {
             inventory.updateQuality();
             inventory.printInventory();
-        }
+        }*/
+            inventory.updateInventory();
+            inventory.printInventory();
 
-        //inventory.accept( new UpdateVisitor());
+    }
+
+    // changer updateInventory pour créer une instance de update visitor qui sera utilisé pour visiter chaque item de la liste
+    public void updateInventory() {
+        UpdateVisitor visitor = new UpdateVisitor();
+        Item[] items = this.items;
+        items[0] = new DexterityItem("+5 Dexterity Vest", 10, 20);
+        for( int i=0 ; i < items.length ; i++ ){
+            items[i].accept( visitor);
+        }
 
     }
 
