@@ -1,13 +1,12 @@
 package edu.insightr.gildedrose;
 
+import java.util.List;
+
 public class Inventory {
 
 
     private Item[] items;
-    //private List<Item> listItems ;
-
-    //changer de constructeur pour ajouter des instances de A, B ou C
-    // Changer update Inventory pour créer une instance de UpdateVisitor qui sera utilisé pour visiter chaque item de la liste
+    private List<IStrategy> listStrategy ;
 
     public Inventory(Item[] items) {
         super();
@@ -26,6 +25,18 @@ public class Inventory {
         };
 
     }
+
+    /*
+    public void updateInventory(){
+        for(...)
+            string t = item[i].getName()
+                    switch(t){
+                        case("diaman"):
+                            listStrategy[0].update(item[i]);
+                        case("or"):
+                            listStrategy[1].update(item[i]);
+                    }
+    }*/
 
     public void printInventory() {
         System.out.println("***************");
