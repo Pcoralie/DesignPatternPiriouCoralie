@@ -4,6 +4,10 @@ public class Inventory {
 
 
     private Item[] items;
+    //private List<Item> listItems ;
+
+    //changer de constructeur pour ajouter des instances de A, B ou C
+    // Changer update Inventory pour créer une instance de UpdateVisitor qui sera utilisé pour visiter chaque item de la liste
 
     public Inventory(Item[] items) {
         super();
